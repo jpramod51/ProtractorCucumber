@@ -1,0 +1,17 @@
+Feature: Test Gmail application
+
+Scenario: Login Testing
+Given I launch the url
+And I give the User mailId "<Email>"
+And I give the User password "<Password>"
+And I give the lastpassword "<Lpwd>"
+And I click on Compose
+And I sends an email with subject "<To mail>","<subject>"
+Then i should get the popup and handle it
+Then I click on Sent folder and mail appears with the subject "<subject>"
+Then i will Logout
+
+
+Examples:
+    |            Email                   |       Password        |       Lpwd       |         To mail              |             subject            |
+    |     pramodjtesting@gmail.com       |      cucumber@7       |    cucumber@7    |  Jayarampramod51@gmail.com   |   Testing ProtractorCucumber   |
